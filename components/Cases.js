@@ -1,3 +1,5 @@
+import Image from 'next/image';
+
 import ArrowLeft from '../components/icons/ArrowLeft';
 import ArrowRight from '../components/icons/ArrowRight';
 
@@ -43,6 +45,13 @@ export default function Cases() {
               </div>
               <div className="case-image">
                 {console.log(`../assets/${caseItem.img}.png`)}
+                <Image
+                  src={`/images/${caseItem.img}.png`}
+                  alt={caseItem.title}
+                  // width={500}
+                  // height={500}
+                  layout="fill"
+                />
               </div>
             </div>
           ))}
