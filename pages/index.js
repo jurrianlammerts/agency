@@ -14,7 +14,7 @@ function Home() {
   return (
     <>
       <Head>
-        <title>Agency 010</title>
+        <title>Agency.</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
