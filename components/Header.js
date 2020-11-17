@@ -23,17 +23,9 @@ export default function Header({ dimensions }) {
     <div className="header">
       <div className="container">
         <div className="row v-center space-between">
-          {menuState.menuOpened === true ? (
-            <div className="logo">
-              <a onClick={() => setMenuState({ menuOpened: false })}>
-                AGENCY.
-              </a>
-            </div>
-          ) : (
-            <div className="logo">
-              <Link href="/">AGENCY.</Link>
-            </div>
-          )}
+          <div className="logo">
+            <Link href="/">AGENCY.</Link>
+          </div>
           <div className="nav-toggle">
             <div
               onClick={() => setMenuState({ menuOpened: true })}

@@ -9,9 +9,6 @@ export default function Nav() {
             <div className="nav-label">Menu</div>
             <ul className="nav-links">
               <li>
-                <Link href="/">Home</Link>
-              </li>
-              <li>
                 <Link href="/about">About</Link>
               </li>
               <li>

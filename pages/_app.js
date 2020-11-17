@@ -1,4 +1,5 @@
 import '../styles/App.scss';
+import 'slick-carousel/slick/slick.css';
 
 function MyApp({ Component, pageProps }) {
   return <Component {...pageProps} />;
