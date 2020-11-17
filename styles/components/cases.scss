@@ -1,6 +1,7 @@
 .cases {
   height: 50vh; // Fallback option
   height: calc(var(--vh, 1vh) * 50);
+  position: relative;
 
   .cases-navigation {
     position: absolute;

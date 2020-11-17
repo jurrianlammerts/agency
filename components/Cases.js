@@ -44,12 +44,9 @@ export default function Cases() {
                 <h2>{caseItem.title}</h2>
               </div>
               <div className="case-image">
-                {console.log(`../assets/${caseItem.img}.png`)}
                 <Image
                   src={`/images/${caseItem.img}.png`}
                   alt={caseItem.title}
-                  // width={500}
-                  // height={500}
                   layout="fill"
                 />
               </div>
