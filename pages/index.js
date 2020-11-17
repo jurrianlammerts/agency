@@ -8,21 +8,20 @@ import IntroOverlay from '../components/IntroOverlay';
 
 const tl = gsap.timeline();
 
-const homepageAnimation = (completeAnimation) =>
-  tl
-    .from('.line span', 1.8, {
-      y: 100,
-      ease: 'power4.out',
-      delay: 1,
-      skewY: 7,
-      stagger: {
-        amount: 0.3,
-      },
-    })
+const homeAnimation = (completeAnimation) => {
+  tl.from('.line span', 1.8, {
+    y: 100,
+    ease: 'power4.out',
+    delay: 1,
+    skewY: 7,
+    stagger: {
+      amount: 0.3,
+    },
+  })
     .to('.overlay-top', 1.6, {
       height: 0,
       ease: 'expo.inOut',
-      stagger: 1.4,
+      stagger: 0.4,
     })
     .to('.overlay-bottom', 1.6, {
       width: 0,
@@ -32,7 +31,9 @@ const homepageAnimation = (completeAnimation) =>
         amount: 0.4,
       },
     })
-    .to('.intro-overlay', 0, { css: { display: 'none' } })
+    .to('.intro-overlay', 0, {
+      css: { display: 'none' },
+    })
     .from('.case-image img', 1.6, {
       scale: 1.4,
       ease: 'expo.inOut',
@@ -42,6 +43,7 @@ const homepageAnimation = (completeAnimation) =>
       },
       onComplete: completeAnimation,
     });
+};
 
 function Home() {
   const [animationComplete, setAnimationComplete] = useState(false);
@@ -51,7 +53,7 @@ function Home() {
   };
 
   useEffect(() => {
-    homepageAnimation(completeAnimation);
+    homeAnimation(completeAnimation);
   }, []);
 
   return (
