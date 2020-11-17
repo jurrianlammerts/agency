@@ -52,7 +52,7 @@ function Home() {
   }, []);
 
   return (
-    <div className="App">
+    <div className="Home">
       <Head>
         <title>Agency.</title>
         <link rel="icon" href="/favicon.ico" />
