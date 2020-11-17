@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 import Slider from 'react-slick';
 
 import ArrowLeft from './icons/ArrowLeft';
@@ -19,18 +20,18 @@ const caseStudies = [
   },
   {
     id: 3,
-    subtitle: 'Lumin',
-    title: 'For your best look ever',
-    img: 'lumin-min',
-  },
-  {
-    id: 11,
     subtitle: 'Solobike',
     title: 'A campaign for biking passionates',
     img: 'bike-min',
   },
   {
-    id: 21,
+    id: 4,
+    subtitle: 'Lumin',
+    title: 'For your best look ever',
+    img: 'lumin-min',
+  },
+  {
+    id: 5,
     subtitle: 'Era',
     title: 'Communicating high tech sport garments',
     img: 'sports-min',
@@ -80,6 +81,13 @@ export default function Cases() {
             <div className="case-details">
               <span>{caseItem.subtitle}</span>
               <h2>{caseItem.title}</h2>
+              <div className="btn-row">
+                <Link href="/about" passHref>
+                  <a>
+                    Case <ArrowRight />
+                  </a>
+                </Link>
+              </div>
             </div>
             <div className="case-image">
               <Image
