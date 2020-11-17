@@ -15,6 +15,9 @@ export default function Nav() {
                 <Link href="/approach">Approach</Link>
               </li>
               <li>
+                <Link href="/cases">Cases</Link>
+              </li>
+              <li>
                 <Link href="/services">Services</Link>
               </li>
             </ul>
