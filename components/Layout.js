@@ -5,7 +5,6 @@ import Header from './Header';
 import Nav from './Nav';
 
 function debounce(fn, ms) {
-  console.log(fn);
   let timer;
   return () => {
     clearTimeout(timer);
