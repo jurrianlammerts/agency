@@ -1,4 +1,5 @@
 import ArrowRight from '../components/icons/ArrowRight';
+import Link from 'next/link';
 
 export default function Banner() {
   return (
@@ -14,10 +15,11 @@ export default function Banner() {
             </div>
           </h2>
           <div className="btn-row">
-            <a href="/">
-              More about us
-              <ArrowRight />
-            </a>
+            <Link href="/about" passHref>
+              <a>
+                More about us <ArrowRight />
+              </a>
+            </Link>
           </div>
         </div>
       </div>

@@ -1,7 +1,17 @@
 import Head from 'next/head';
+import gsap from 'gsap'
+import { useEffect } from 'react';
 import Header from './Header';
 
 export default function Layout({ children }) {
+  useEffect(() => {
+    let vh = window.innerHeight * 0.01;
+    document.documentElement.style.setProperty('--vh', `${vh}px`);
+
+    // Prevent flashing
+    gsap.to('body', 0, { css: { visibility: 'visible' } });
+  }, []);
+
   return (
     <div className="App">
       <Head>
