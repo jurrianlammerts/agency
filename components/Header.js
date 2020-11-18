@@ -8,7 +8,7 @@ import { openMenu, closeMenu } from '../animations/menuAnimations';
 
 let tl = gsap.timeline();
 
-export default function Header({ dimensions }) {
+export default function Header({ dimensions, home = false }) {
   const [menuState, setMenuState] = useState({ menuOpened: false });
   const router = useRouter();
 
@@ -21,7 +21,7 @@ export default function Header({ dimensions }) {
   });
 
   return (
-    <div className="header">
+    <div className={`header ${home ? 'black' : 'white'}`}>
       <div className="container">
         <div className="row v-center space-between">
           <div className="logo">

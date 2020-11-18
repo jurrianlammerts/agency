@@ -19,7 +19,7 @@ function debounce(fn, ms) {
   };
 }
 
-export default function Layout({ children }) {
+export default function Layout({ children, home }) {
   const [dimensions, setDimensions] = useState(null);
 
   useEffect(() => {
@@ -47,7 +47,7 @@ export default function Layout({ children }) {
 
   return (
     <>
-      <Header dimensions={dimensions} />
+      <Header dimensions={dimensions} home={home} />
       <Nav />
       <div className="App">
         <Head>

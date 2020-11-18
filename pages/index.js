@@ -59,7 +59,7 @@ export default function Home({ allCases }) {
   }, []);
 
   return (
-    <Layout>
+    <Layout home>
       {!animationComplete && <IntroOverlay />}
       <Banner />
       <CasesSection cases={allCases} />

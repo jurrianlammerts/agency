@@ -1,6 +1,5 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import { useRef, useEffect } from 'react';
 
 // import ArrowLeft from './icons/ArrowLeft';
 // import ArrowRight from './icons/ArrowRight';

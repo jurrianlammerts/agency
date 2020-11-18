@@ -1,3 +1,5 @@
+import Image from 'next/image';
+import Link from 'next/link';
 import Layout from '../../components/Layout';
 import {
   getAllCaseIds,
@@ -5,16 +7,20 @@ import {
   getSortedCasesData,
 } from '../../lib/cases';
 
-export default function SingleCase(props) {
-  console.log(props);
+export default function SingleCase({ postData }) {
   return (
     <Layout>
       <div className="page">
-        <div className="container">
-          <div className="row">
-            <h2>Case: </h2>
-          </div>
+        <div className="header-image">
+          <Image
+            src={`/images/${postData.img}.png`}
+            alt={postData.title}
+            layout="fill"
+          />
+          <h2>{postData.subtitle}</h2>
+          <h1>{postData.title}</h1>
         </div>
+        <div className="container"></div>
       </div>
     </Layout>
   );
