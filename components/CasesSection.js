@@ -1,36 +1,11 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { useRef, useEffect } from 'react';
-import Slider from 'react-slick';
 
-import ArrowLeft from './icons/ArrowLeft';
-import ArrowRight from './icons/ArrowRight';
+// import ArrowLeft from './icons/ArrowLeft';
+// import ArrowRight from './icons/ArrowRight';
 
-const caseStudies = [
-  {
-    id: 1,
-    slug: 'curology',
-    subtitle: 'Curology',
-    title: 'A custom formula for your skin’s unique needs',
-    img: 'curology-min',
-  },
-  {
-    id: 2,
-    slyg: 'yourspace',
-    subtitle: 'Yourspace',
-    title: 'Open space floor plans for you next venture',
-    img: 'yourspace-min',
-  },
-  {
-    id: 3,
-    slug: 'solobike',
-    subtitle: 'Solobike',
-    title: 'A campaign for biking passionates',
-    img: 'bike-min',
-  },
-];
-
-export default function Cases() {
+export default function Cases({ cases }) {
   return (
     <section className="cases">
       <div className="container-fluid">
@@ -43,9 +18,9 @@ export default function Cases() {
           </div>
         </div> */}
         <div className="row">
-          {caseStudies.map((caseItem) => (
-            <div className="case" key={caseItem.id}>
-              <Link href={`/cases/${caseItem.slug}`}>
+          {cases.map((caseItem) => (
+            <Link href={`/cases/${caseItem.slug}`} key={caseItem.id}>
+              <div className="case">
                 <>
                   <div className="case-details">
                     <span>{caseItem.subtitle}</span>
@@ -59,8 +34,8 @@ export default function Cases() {
                     />
                   </div>
                 </>
-              </Link>
-            </div>
+              </div>
+            </Link>
           ))}
         </div>
       </div>

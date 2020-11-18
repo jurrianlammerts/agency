@@ -5,15 +5,26 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "cache-cases": "node scripts/cache.js"
   },
   "dependencies": {
+    "gray-matter": "^4.0.2",
     "gsap": "^3.5.1",
     "next": "10.0.1",
+    "path": "^0.12.7",
     "react": "17.0.1",
     "react-dom": "17.0.1",
-    "react-slick": "^0.27.13",
-    "sass": "^1.29.0",
-    "slick-carousel": "^1.8.1"
+    "remark": "^13.0.0",
+    "remark-html": "^13.0.1",
+    "sass": "^1.29.0"
+  },
+  "devDependencies": {
+    "husky": "^4.3.0"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "yarn cache-cases && git add cache/data.js"
+    }
   }
 }

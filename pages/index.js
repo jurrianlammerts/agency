@@ -6,6 +6,8 @@ import Banner from '../components/Banner';
 import CasesSection from '../components/CasesSection';
 import IntroOverlay from '../components/IntroOverlay';
 
+import { getSortedCasesData } from '../lib/cases';
+
 const tl = gsap.timeline();
 
 const homeAnimation = (completeAnimation) => {
@@ -45,7 +47,7 @@ const homeAnimation = (completeAnimation) => {
     });
 };
 
-function Home() {
+export default function Home({ allCases }) {
   const [animationComplete, setAnimationComplete] = useState(false);
 
   const completeAnimation = () => {
@@ -60,9 +62,15 @@ function Home() {
     <Layout>
       {!animationComplete && <IntroOverlay />}
       <Banner />
-      <CasesSection />
+      <CasesSection cases={allCases} />
     </Layout>
   );
 }
 
-export default Home;
+export async function getStaticProps() {
+  const allCases = getSortedCasesData();
+
+  return {
+    props: { allCases },
+  };
+}

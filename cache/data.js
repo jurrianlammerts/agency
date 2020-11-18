@@ -1,0 +1,1 @@
+export const cases = [{"id":"curology","title":"A custom formula for your skin’s unique needs","subTitle":"Curology"},{"id":"solobike","title":"A campaign for biking passionates","subTitle":"Solobike"},{"id":"yourspace","title":"Open space floor plans for you next venture","subTitle":"Yourspace"}]
