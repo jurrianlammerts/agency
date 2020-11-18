@@ -3,12 +3,14 @@ import gsap from 'gsap';
 let tl = gsap.timeline();
 
 export const openMenu = (width) => {
-  tl.to('nav', 0, {
-    css: {
-      display: 'block',
-    },
-  })
-    .to('body', 0, { css: { overflow: 'hidden' } })
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+
+  tl.to('body', 0, { css: { overflow: 'hidden' } })
+    .to('nav', 0, {
+      css: {
+        display: 'block',
+      },
+    })
     .to('.App', 1, {
       y: width <= 654 ? '100vh' : '70vh',
       ease: 'expo.inOut',
