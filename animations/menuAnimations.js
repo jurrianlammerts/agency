@@ -3,14 +3,19 @@ import { gsap } from 'gsap/dist/gsap';
 let tl = gsap.timeline();
 
 export const openMenu = (width) => {
-  // window.scrollTo({ top: 0, behavior: 'smooth' });
-
   tl.to(window, { duration: 0.5, scrollTo: { y: 0 }, ease: 'expo.inOut' })
     .to('body', 0, { css: { overflow: 'hidden' } })
     .to('nav', 0, {
       css: {
         display: 'block',
       },
+    })
+    .to('.logo a', 0, {
+      css: {
+        color: '#000',
+      },
+      duration: 0.7,
+      ease: 'expo.inOut',
     })
     .to('.App', 1, {
       y: width <= 654 ? '100vh' : '70vh',
@@ -57,10 +62,24 @@ export const openMenu = (width) => {
 };
 
 export const closeMenu = () => {
-  tl.to('.App', 1, {
-    y: 0,
+  tl.to('.white .logo a', 0, {
+    css: {
+      color: '#fff',
+    },
+    duration: 0.7,
     ease: 'expo.inOut',
   })
+    .to('.black .logo a', 0, {
+      css: {
+        color: '#000',
+      },
+      duration: 0.7,
+      ease: 'expo.inOut',
+    })
+    .to('.App', 1, {
+      y: 0,
+      ease: 'expo.inOut',
+    })
     .to('#circle', 0.6, {
       delay: -0.6,
       css: {
