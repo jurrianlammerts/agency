@@ -1,5 +1,7 @@
 ---
 id: 3
+index: 2
+date: '2020-09-02'
 slug: 'solobike'
 subtitle: 'Solobike'
 title: 'A campaign for biking passionates'
@@ -7,10 +9,4 @@ img: 'bike-min'
 backgroundColor: '#814A0E'
 ---
 
-Fact: Food delivery service apps are the future.
-
-The days of calling into a restaurant to speak with a rude host are finally over. Whether if it’s constantly being put on hold or having to scream your order through the deafening background noise, ordering food has been and always be a hassle.
-
-Well thankfully, there’s hope, thanks to some amazing on-demand food delivery service apps!
-
-With just a few taps on the screen, we now have access to hundreds or new and delicious restaurants ranging from every cuisine you can think of. And they’re just getting started 🙂
+We are for inclusivity. Ride the bike you like, when you like, wearing what makes you feel good. Riding in a group, or by yourself, whatever you do #ridesolo

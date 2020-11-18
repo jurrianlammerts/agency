@@ -10,13 +10,6 @@ export const openMenu = (width) => {
         display: 'block',
       },
     })
-    .to('.logo a', 0, {
-      css: {
-        color: '#000',
-      },
-      duration: 0.7,
-      ease: 'expo.inOut',
-    })
     .to('.App', 1, {
       y: width <= 654 ? '100vh' : '70vh',
       ease: 'expo.inOut',
@@ -62,24 +55,10 @@ export const openMenu = (width) => {
 };
 
 export const closeMenu = () => {
-  tl.to('.white .logo a', 0, {
-    css: {
-      color: '#fff',
-    },
-    duration: 0.7,
+  tl.to('.App', 1, {
+    y: 0,
     ease: 'expo.inOut',
   })
-    .to('.black .logo a', 0, {
-      css: {
-        color: '#000',
-      },
-      duration: 0.7,
-      ease: 'expo.inOut',
-    })
-    .to('.App', 1, {
-      y: 0,
-      ease: 'expo.inOut',
-    })
     .to('#circle', 0.6, {
       delay: -0.6,
       css: {

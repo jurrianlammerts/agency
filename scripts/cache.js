@@ -5,8 +5,8 @@ const matter = require('gray-matter');
 function caseData() {
   const casesDirectory = path.join(process.cwd(), 'cases');
   const fileNames = fs.readdirSync(casesDirectory);
-  const cases = fileNames.map((fileName) => {
-    const id = fileName.replace(/\.md$/, '');
+  const cases = fileNames.map((fileName, index) => {
+    const id = index;
     const fullPath = path.join(casesDirectory, fileName);
     const fileContents = fs.readFileSync(fullPath, 'utf8');
     const matterResult = matter(fileContents);

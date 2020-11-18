@@ -9,6 +9,7 @@
     "cache-cases": "node scripts/cache.js"
   },
   "dependencies": {
+    "date-fns": "^2.16.1",
     "gray-matter": "^4.0.2",
     "gsap": "^3.5.1",
     "next": "10.0.1",

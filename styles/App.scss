@@ -5,6 +5,7 @@
 @import './components/banner.scss';
 @import './components/cases.scss';
 @import './components/navigation.scss';
+@import './components/single-case.scss';
 
 body,
 html {
@@ -43,6 +44,13 @@ html {
     padding: 0 32px;
     @include media('<=phone') {
       padding: 0 16px;
+    }
+  }
+  .content {
+    margin-top: 32px;
+    padding: 0 32px;
+    time {
+      font-weight: 700;
     }
   }
   .v-center {
@@ -145,31 +153,5 @@ html {
   .row {
     display: flex;
     align-items: center;
-  }
-  .header-image {
-    position: relative;
-    height: 50vh;
-    h2 {
-      text-transform: uppercase;
-      top: 35%;
-      width: 100%;
-      text-align: center;
-      transform: translate(0, -50%);
-      color: $white;
-      position: absolute;
-    }
-    h1 {
-      top: 50%;
-      width: 100%;
-      text-align: center;
-      transform: translate(0, -50%);
-      color: $white;
-      opacity: 0.75;
-      position: absolute;
-    }
-    img {
-      object-fit: cover;
-      filter: brightness(50%);
-    }
   }
 }

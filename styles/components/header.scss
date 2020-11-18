@@ -6,26 +6,11 @@
   @include media('<=phone') {
     height: 96px;
   }
-  &.white {
-    a {
-      color: $white;
-    }
-    .hamburger-menu span {
-      background: $white;
-    }
-  }
-  &.black {
-    a {
-      color: $black;
-    }
-    .hamburger-menu span {
-      background: $black;
-    }
-  }
   .logo {
     cursor: pointer;
     a {
       font-size: 1.2rem;
+      color: $black;
       letter-spacing: 0.5rem;
       text-decoration: none;
       font-weight: 700;
@@ -48,6 +33,7 @@
     .hamburger-menu {
       width: 25px;
       span {
+        background: $black;
         text-align: center;
         margin: 0.3rem 0;
         height: 2px;
