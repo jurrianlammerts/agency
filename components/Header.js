@@ -25,7 +25,7 @@ export default function Header({ dimensions, home = false }) {
       <div className="container">
         <div className="row v-center space-between">
           <div className="logo">
-            <Link href="/">AGENCY.</Link>
+            <Link href="/">RDAM.</Link>
           </div>
           <div className="nav-toggle">
             <div
