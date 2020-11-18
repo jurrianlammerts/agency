@@ -26,18 +26,15 @@ export default function Nav() {
             <div className="nav-label">Contact</div>
             <div className="nav-infos">
               <ul className="nav-info">
-                <li className="nav-info-label">Email</li>
                 <li className="nav-info-label">
-                  <Link href="/contact">Get in touch with us</Link>
+                  <Link href="/contact">Email</Link>
                 </li>
                 <li className="nav-info-label">
-                  <Link href="/audit">Get a free audit</Link>
+                  <Link href="/contact">Get in touch with us</Link>
                 </li>
               </ul>
               <ul className="nav-info">
                 <li className="nav-info-label">Headquarters</li>
-                <li>Weena 950</li>
-                <li>3013 AL</li>
                 <li>Rotterdam</li>
               </ul>
               <ul className="nav-info">
