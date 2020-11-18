@@ -1,17 +1,42 @@
-import ArrowRight from '../components/icons/ArrowRight';
+import { useRouter } from 'next/router';
 import Link from 'next/link';
+import { useEffect, useState } from 'react';
+
+import ArrowRight from '../components/icons/ArrowRight';
+
+const quotes = [
+  {
+    first: 'Creating unique brands is',
+    second: 'what we do.',
+  },
+  {
+    first: 'Solve important problems',
+    second: 'through design.',
+  },
+  {
+    first: 'We build',
+    second: 'your dream.',
+  },
+];
 
 export default function Banner() {
+  const router = useRouter();
+  const [quote, setQuote] = useState(null);
+
+  useEffect(() => {
+    setQuote(quotes[Math.floor(Math.random() * quotes.length)]);
+  }, [router.pathname]);
+
   return (
     <section className="main">
       <div className="container">
         <div className="row">
           <h2>
             <div className="line">
-              <span>Creating unique brands is</span>
+              <span>{quote && quote.first}</span>
             </div>
             <div className="line">
-              <span>what we do.</span>
+              <span>{quote && quote.second}</span>
             </div>
           </h2>
           <div className="btn-row">
