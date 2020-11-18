@@ -1,7 +1,8 @@
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { useState, useEffect } from 'react';
-import gsap from 'gsap';
+import { gsap } from 'gsap/dist/gsap';
+
 import ArrowUp from './icons/ArrowUp';
 import { openMenu, closeMenu } from '../animations/menuAnimations';
 

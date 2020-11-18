@@ -1,4 +1,4 @@
-import gsap from 'gsap';
+import { gsap } from 'gsap/dist/gsap';
 
 import { useEffect, useState } from 'react';
 import Layout from '../components/Layout';

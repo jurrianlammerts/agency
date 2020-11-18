@@ -1,8 +1,12 @@
 import Head from 'next/head';
-import gsap from 'gsap';
+import { gsap } from 'gsap/dist/gsap';
+import { ScrollToPlugin } from 'gsap/dist/ScrollToPlugin.js';
+
 import { useEffect, useState } from 'react';
 import Header from './Header';
 import Nav from './Nav';
+
+gsap.registerPlugin(ScrollToPlugin);
 
 function debounce(fn, ms) {
   let timer;
