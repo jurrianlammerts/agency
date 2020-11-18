@@ -1,11 +1,15 @@
 import gsap from 'gsap';
+import { ScrollToPlugin } from 'gsap/ScrollToPlugin.js';
+
+gsap.registerPlugin(ScrollToPlugin);
 
 let tl = gsap.timeline();
 
 export const openMenu = (width) => {
-  window.scrollTo({ top: 0, behavior: 'smooth' });
+  // window.scrollTo({ top: 0, behavior: 'smooth' });
 
-  tl.to('body', 0, { css: { overflow: 'hidden' } })
+  tl.to(window, { duration: 0.5, scrollTo: { y: 0 }, ease: 'expo.inOut' })
+    .to('body', 0, { css: { overflow: 'hidden' } })
     .to('nav', 0, {
       css: {
         display: 'block',
