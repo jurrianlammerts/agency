@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
+import { motion } from 'framer-motion';
 import {
   getAllCaseIds,
   getCaseData,
@@ -44,15 +45,22 @@ export default function SingleCase({ allCases, caseData }) {
     <Layout>
       <div className="page">
         <div className="single-case">
-          <div className="hero-image">
+          <motion.div
+            key={caseData.id}
+            className="hero-image"
+            layoutId="image"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.5 }}
+          >
             <Image
-              key={caseData.slug}
+              key={caseData.id}
               src={`/images/${caseData.img}.png`}
               alt={caseData.title}
               layout="fill"
             />
             <h1>{caseData.subtitle}</h1>
-          </div>
+          </motion.div>
           <div className="container">
             <div className="content">
               <h2>{caseData.title}</h2>

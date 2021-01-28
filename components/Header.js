@@ -25,7 +25,16 @@ export default function Header({ dimensions }) {
       <div className="container">
         <div className="row v-center space-between">
           <div className="logo">
-            <Link href="/">RDAM.</Link>
+            <Link href="/">
+              <a>
+                <span>
+                  LAMB
+              </span>
+                <span>
+                  DIGITAL
+              </span>
+              </a>
+            </Link>
           </div>
           <div className="nav-toggle">
             <div

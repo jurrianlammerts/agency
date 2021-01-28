@@ -21,6 +21,11 @@ html {
   -moz-osx-font-smoothing: grayscale;
 }
 
+a {
+  color: $black;
+  text-decoration: none;
+}
+
 .container {
   width: 1560px;
   min-width: 1560px;
