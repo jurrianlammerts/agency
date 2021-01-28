@@ -25,17 +25,17 @@ export default function Banner() {
     <section className="main">
       <div className="container">
         <div className="row">
-          <h2>
+          <h1>
             <div className="line">
               <span>{quote && quote.first}</span>
             </div>
             <div className="line">
               <span>{quote && quote.second}</span>
             </div>
-          </h2>
-          <div className="btn-row">
+          </h1>
+          {/* <div className="btn-row">
             <CTAButton text="Get in touch" href="/about" large />
-          </div>
+          </div> */}
         </div>
       </div>
     </section>
