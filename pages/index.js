@@ -3,8 +3,9 @@ import { gsap } from 'gsap/dist/gsap';
 import { useEffect, useState } from 'react';
 import Layout from '../components/Layout';
 import Banner from '../components/Banner';
-import CasesSection from '../components/CasesSection';
+import HomeCases from '../components/HomeCases';
 import IntroOverlay from '../components/IntroOverlay';
+import TextSection from '../components/TextSection';
 
 import { getSortedCasesData } from '../lib/cases';
 
@@ -25,18 +26,13 @@ const homeAnimation = (completeAnimation) => {
       ease: 'expo.inOut',
       stagger: 0.4,
     })
-    .to('.overlay-bottom', 1.6, {
-      width: 0,
-      ease: 'expo.inOut',
-      delay: -0.8,
-      stagger: {
-        amount: 0.4,
-      },
+    .to('.App', 0, {
+      css: { position: 'relative' },
     })
     .to('.intro-overlay', 0, {
       css: { display: 'none' },
     })
-    .from('.case-image img', 1.6, {
+    .from('.inner', 1.6, {
       scale: 1.4,
       ease: 'expo.inOut',
       delay: -2,
@@ -61,8 +57,13 @@ export default function Home({ allCases }) {
   return (
     <Layout>
       {!animationComplete && <IntroOverlay />}
+      <IntroOverlay />
       <Banner />
-      <CasesSection cases={allCases} />
+      <HomeCases cases={allCases} />
+      <section className="inner">
+
+        <TextSection />
+      </section>
     </Layout>
   );
 }

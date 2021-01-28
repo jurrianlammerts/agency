@@ -1,21 +1,15 @@
 import { useRouter } from 'next/router';
-import Link from 'next/link';
 import { useEffect, useState } from 'react';
-
-import ArrowRight from '../components/icons/ArrowRight';
+import CTAButton from "../components/CTAButton"
 
 const quotes = [
   {
-    first: 'Creating unique brands is',
-    second: 'what we do.',
+    first: 'We create digital engagement',
+    second: 'and brand loyalty.',
   },
   {
     first: 'Solve important problems',
     second: 'through design.',
-  },
-  {
-    first: 'We build',
-    second: 'your dream.',
   },
 ];
 
@@ -40,11 +34,7 @@ export default function Banner() {
             </div>
           </h2>
           <div className="btn-row">
-            <Link href="/about" passHref>
-              <a>
-                More about us <ArrowRight />
-              </a>
-            </Link>
+            <CTAButton text="Get in touch" href="/about" large />
           </div>
         </div>
       </div>

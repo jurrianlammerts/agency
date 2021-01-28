@@ -7,11 +7,11 @@
     height: 96px;
   }
   .logo {
-    cursor: pointer;
+    mix-blend-mode: difference;
     span {
+      cursor: pointer;
       display: block;
       font-size: 1.2rem;
-      color: $black;
       letter-spacing: 0.5rem;
       line-height: 1.75rem;
       text-decoration: none;
