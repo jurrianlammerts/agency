@@ -5,7 +5,7 @@ date: '2020-01-02'
 slug: 'yourspace'
 subtitle: 'Yourspace'
 title: 'Open space floor plans for you next venture'
-img: 'yourspace-min'
+img: 'yourspace.jpg'
 backgroundColor: '#CC555B'
 ---
 

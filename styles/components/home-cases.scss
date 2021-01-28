@@ -1,7 +1,7 @@
 .home-cases {
-position: relative;
-  &:before{
-    content: "";
+  position: relative;
+  &:before {
+    content: '';
     position: absolute;
     top: 8rem;
     left: 0;
@@ -22,14 +22,10 @@ position: relative;
         position: relative;
         margin: 4rem 0;
         .case-image {
-        height: 100%;
-        min-height: 500px;
+          height: 100%;
+          min-height: 500px;
           img {
             object-fit: cover;
-            transition: all .25s;
-            &:hover {
-              transform: scale(1.05);
-            }
           }
         }
         .case-details {
@@ -42,7 +38,7 @@ position: relative;
 
           h2 {
             font-size: 2.5rem;
-            margin: .5rem 0;
+            margin: 0.5rem 0;
           }
           span {
             font-size: 1.5rem;

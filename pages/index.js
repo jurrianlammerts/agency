@@ -6,6 +6,8 @@ import Banner from '../components/Banner';
 import HomeCases from '../components/HomeCases';
 import IntroOverlay from '../components/IntroOverlay';
 import TextSection from '../components/TextSection';
+import CTA from '../components/HomeCTA';
+import Footer from '../components/Footer';
 
 import { getSortedCasesData } from '../lib/cases';
 
@@ -15,13 +17,13 @@ const homeAnimation = (completeAnimation) => {
   tl.from('.line span', 1.8, {
     y: 100,
     ease: 'power4.out',
-    delay: 1,
+    delay: .75,
     skewY: 7,
     stagger: {
       amount: 0.3,
     },
   })
-    .to('.overlay-top', 1.6, {
+    .to('.overlay-top', 1.2, {
       height: 0,
       ease: 'expo.inOut',
       stagger: 0.4,
@@ -31,16 +33,8 @@ const homeAnimation = (completeAnimation) => {
     })
     .to('.intro-overlay', 0, {
       css: { display: 'none' },
-    })
-    .from('.inner', 1.6, {
-      scale: 1.4,
-      ease: 'expo.inOut',
-      delay: -2,
-      stagger: {
-        amount: 0.4,
-      },
       onComplete: completeAnimation,
-    });
+    })
 };
 
 export default function Home({ allCases }) {
@@ -57,13 +51,11 @@ export default function Home({ allCases }) {
   return (
     <Layout>
       {!animationComplete && <IntroOverlay />}
-      <IntroOverlay />
       <Banner />
       <HomeCases cases={allCases} />
-      <section className="inner">
-
-        <TextSection />
-      </section>
+      <TextSection />
+      <CTA />
+      <Footer />
     </Layout>
   );
 }

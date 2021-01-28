@@ -1,57 +1,61 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import { motion } from "framer-motion"
+import { gsap } from 'gsap/dist/gsap';
 
-const caseStudies = [
-  {
-    id: 1,
-    subtitle: 'Curology',
-    title: 'A custom formula for your skin’s unique needs',
-    img: 'curology-min',
-  },
-  {
-    id: 2,
-    subtitle: 'Yourspace',
-    title: 'Open space floor plans for you next venture',
-    img: 'yourspace-min',
-  },
-  {
-    id: 3,
-    subtitle: 'Lumin',
-    title: 'For your best look ever',
-    img: 'lumin-min',
-  },
-];
+export default function Cases({ cases }) {
 
-export default function Cases() {
+  const tl = gsap.timeline()
+
+  const onHover = (hover, index) => {
+    if (hover) {
+      tl.to(`#case-${index} .case-image`, 0.5, {
+        ease: 'expo.easeIn',
+        css: {
+          clipPath: "polygon(2.5% 2.5%, 97.5% 2.5%, 97.5% 97.5%, 2.5% 97.5%)",
+        },
+      }).to(`#case-${index} .case-image img`, 0.5, {
+        ease: 'expo.easeIn',
+        duration: 0.5,
+        scale: 1.05,
+      }, '-=0.5')
+    } else {
+      tl.to(`#case-${index} .case-image img`, 0.5, {
+        duration: 1,
+        ease: 'expo.easeOut',
+        scale: 1,
+      }).to(`#case-${index} .case-image`, 0.5, {
+        duration: 1,
+        ease: 'expo.easeOut',
+        css: {
+          clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
+        },
+      }, '-=0.5')
+    }
+  }
+
   return (
     <section className="home-cases">
       <div className="container">
         <div className="column">
-          {caseStudies.map((caseItem) => (
+          {cases.map((caseItem, index) => (
             <Link href="/" key={caseItem.id}>
-              <a className="case">
+              <a
+                className="case"
+                onMouseEnter={() => onHover(true, index)}
+                onMouseLeave={() => onHover(false, index)}
+                id={`case-${index}`}
+              >
                 <div className="case-details">
                   <h2>{caseItem.subtitle}</h2>
                   <span>{caseItem.title}</span>
                 </div>
-                <motion.div
-                  style={{
-                    clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
-                  }}
-                  whileHover={{
-                    clipPath:
-                      "polygon(2.5% 2.5%, 97.5% 2.5%, 97.5% 97.5%, 2.5% 97.5%)",
-                  }}
-                  transition={{ duration: 0.25 }}
-                  className="case-image"
-                >
+                <div className="case-image">
                   <Image
-                    src={`/images/${caseItem.img}.png`}
+                    src={`/images/${caseItem.img}`}
                     alt={caseItem.title}
                     layout="fill"
                   />
-                </ motion.div>
+                </div>
               </a>
             </Link>
           ))}

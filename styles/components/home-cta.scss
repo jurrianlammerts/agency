@@ -1,0 +1,26 @@
+.home-cta {
+  background-color: $black;
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  a {
+    display: inline;
+    position: relative;
+    font-size: calc(80px + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
+    color: $white;
+    font-family: 'GilroyBold', 'Helvetica Neue', sans-serif;
+
+    .link-dot {
+      position: absolute;
+      width: 1rem;
+      height: 1rem;
+      background: $cta;
+      border-radius: 50%;
+      top: 3rem;
+      right: -3rem;
+    }
+  }
+}

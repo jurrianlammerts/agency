@@ -2,10 +2,10 @@
 id: 1
 index: 0
 date: '2020-10-17'
-slug: 'curology'
-subtitle: 'Curology'
+slug: 'lumin'
+subtitle: 'Lumin'
 title: 'A custom formula for your skin’s unique needs'
-img: 'curology-min'
+img: 'lumin-min.png'
 backgroundColor: '#959684'
 ---
 

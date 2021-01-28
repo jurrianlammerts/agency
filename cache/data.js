@@ -1,1 +1,1 @@
-export const cases = [{"id":0,"title":"A custom formula for your skin’s unique needs","subTitle":"Curology"},{"id":1,"title":"A campaign for biking passionates","subTitle":"Solobike"},{"id":2,"title":"Open space floor plans for you next venture","subTitle":"Yourspace"}]
+export const cases = [{"id":0,"title":"A custom formula for your skin’s unique needs","subTitle":"Lumin"},{"id":1,"title":"A campaign for car passionates","subTitle":"Porsche"},{"id":2,"title":"Open space floor plans for you next venture","subTitle":"Yourspace"}]
