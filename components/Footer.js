@@ -19,16 +19,16 @@ export default function Footer() {
             </Link>
           </div>
           <div className="footer-socials">
-            <IconButton href="https://www.facebook.com/">
+            <IconButton label="facebook" href="https://www.facebook.com/">
               <Facebook />
             </IconButton>
-            <IconButton href="https://twitter.com/">
+            <IconButton label="twitter" href="https://twitter.com/">
               <Twitter />
             </IconButton>
-            <IconButton href="https://www.linkedin.com/">
+            <IconButton label="linkedin" href="https://www.linkedin.com/">
               <Linkedin />
             </IconButton>
-            <IconButton href="https://www.instagram.com/">
+            <IconButton label="instagram" href="https://www.instagram.com/">
               <Instagram />
             </IconButton>
           </div>

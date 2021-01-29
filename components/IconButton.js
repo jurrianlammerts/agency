@@ -1,6 +1,11 @@
-export default function IconButton({ href, children }) {
+export default function IconButton({ href, children, label }) {
   return (
-    <a className="icon-button" rel="noopener nofollow" href={href}>
+    <a
+      aria-label={`${label}-icon`}
+      className="icon-button"
+      rel="noopener nofollow"
+      href={href}
+    >
       {children}
     </a>
   );
