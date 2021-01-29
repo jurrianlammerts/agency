@@ -28,9 +28,9 @@ const homeAnimation = (completeAnimation) => {
     })
     .from(
       ".case-image img",
-      0.75,
+      0.7,
       {
-        ease: "expo.easeOut",
+        ease: "expo.easeIn",
         scale: 1.25,
       },
       "-=1"
