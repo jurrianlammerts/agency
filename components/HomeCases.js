@@ -20,6 +20,7 @@ export default function Cases({ cases }) {
                     alt={caseItem.title}
                     layout="fill"
                     quality={50}
+                    priority
                   />
                 </div>
               </a>
