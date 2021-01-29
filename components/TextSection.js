@@ -1,6 +1,5 @@
-import React from 'react'
-import Link from 'next/link';
-import CTAButton from '../components/CTAButton';
+import React from "react";
+import ArrowCTAButton from "../components/ArrowCTAButton";
 
 export default function TextSection() {
   return (
@@ -12,10 +11,12 @@ export default function TextSection() {
       </div>
       <div className="paragraph">
         <p>
-          This is how we work. We build our agency and services around your brand, giving equal weight to the analytical and creative aspects of the challenge.
+          This is how we work. We build our agency and services around your
+          brand, giving equal weight to the analytical and creative aspects of
+          the challenge.
         </p>
-        <CTAButton text="Learn more" href="/" />
+        <ArrowCTAButton text="Learn more" href="/" />
       </div>
     </section>
-  )
+  );
 }

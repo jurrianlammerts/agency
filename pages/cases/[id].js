@@ -1,17 +1,16 @@
-import Image from 'next/image';
-import Link from 'next/link';
-import { useEffect, useState } from 'react';
-import { motion } from 'framer-motion';
+import Image from "next/image";
+import Link from "next/link";
+import { motion } from "framer-motion";
 import {
   getAllCaseIds,
   getCaseData,
   getSortedCasesData,
-} from '../../lib/cases';
+} from "../../lib/cases";
 
-import Layout from '../../components/Layout';
-import Date from '../../components/Date';
-import ArrowLeft from '../../components/icons/ArrowLeft';
-import ArrowRight from '../../components/icons/ArrowRight';
+import Layout from "../../components/Layout";
+import Date from "../../components/Date";
+import ArrowLeft from "../../components/icons/ArrowLeft";
+import ArrowRight from "../../components/icons/ArrowRight";
 
 export default function SingleCase({ allCases, caseData }) {
   const arrayLength = allCases.length - 1;

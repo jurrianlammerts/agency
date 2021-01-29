@@ -1,12 +1,7 @@
-import '../styles/App.scss';
-import { AnimateSharedLayout } from 'framer-motion';
+import "../styles/App.scss";
 
 function MyApp({ Component, pageProps }) {
-  return (
-    <AnimateSharedLayout>
-      <Component {...pageProps} />
-    </AnimateSharedLayout>
-  );
+  return <Component {...pageProps} />;
 }
 
 export default MyApp;

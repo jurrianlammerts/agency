@@ -1,13 +1,11 @@
-import Link from 'next/link';
-import { useRouter } from 'next/router';
-import { useState, useEffect } from 'react';
+import Link from "next/link";
+import { useState, useEffect } from "react";
 
-import ArrowUp from './icons/ArrowUp';
-import { openMenu, closeMenu } from '../animations/menuAnimations';
+import ArrowUp from "./icons/ArrowUp";
+import { openMenu, closeMenu } from "../animations/menuAnimations";
 
 export default function Header({ dimensions }) {
   const [menuState, setMenuState] = useState({ menuOpened: false });
-  const router = useRouter();
 
   useEffect(() => {
     if (menuState.menuOpened === true) {
@@ -24,12 +22,8 @@ export default function Header({ dimensions }) {
           <div className="logo">
             <Link href="/">
               <a>
-                <span>
-                  LAMB
-              </span>
-                <span>
-                  DIGITAL
-              </span>
+                <span>LAMB</span>
+                <span>DIGITAL</span>
               </a>
             </Link>
           </div>

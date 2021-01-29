@@ -1,5 +1,4 @@
-import Link from 'next/link';
-import { motion } from "framer-motion"
+import Link from "next/link";
 
 export default function Footer() {
   return (
@@ -9,12 +8,8 @@ export default function Footer() {
           <div className="logo">
             <Link href="/">
               <a>
-                <span>
-                  LAMB
-              </span>
-                <span>
-                  DIGITAL
-              </span>
+                <span>LAMB</span>
+                <span>DIGITAL</span>
               </a>
             </Link>
           </div>

@@ -11,10 +11,11 @@
 @import './components/cta-button.scss';
 @import './components/home-cta.scss';
 @import './components/footer.scss';
+@import './components/cta-link.scss';
 
 @font-face {
-  font-family: "GilroyBold";
-  src: url("/fonts/Gilroy-Bold.woff");
+  font-family: 'GilroyBold';
+  src: url('/fonts/Gilroy-Bold.woff');
   font-style: normal;
   font-weight: 400;
   font-display: swap;

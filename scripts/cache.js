@@ -1,14 +1,14 @@
-const fs = require('fs');
-const path = require('path');
-const matter = require('gray-matter');
+const fs = require("fs");
+const path = require("path");
+const matter = require("gray-matter");
 
 function caseData() {
-  const casesDirectory = path.join(process.cwd(), 'cases');
+  const casesDirectory = path.join(process.cwd(), "cases");
   const fileNames = fs.readdirSync(casesDirectory);
   const cases = fileNames.map((fileName, index) => {
     const id = index;
     const fullPath = path.join(casesDirectory, fileName);
-    const fileContents = fs.readFileSync(fullPath, 'utf8');
+    const fileContents = fs.readFileSync(fullPath, "utf8");
     const matterResult = matter(fileContents);
     return {
       id,
@@ -20,12 +20,12 @@ function caseData() {
 }
 
 try {
-  fs.readdirSync('cache');
+  fs.readdirSync("cache");
 } catch (e) {
-  fs.mkdirSync('cache');
+  fs.mkdirSync("cache");
 }
 
-fs.writeFile('cache/data.js', caseData(), function (err) {
+fs.writeFile("cache/data.js", caseData(), function (err) {
   if (err) return console.log(err);
-  console.log('Cases cached.');
+  console.log("Cases cached.");
 });

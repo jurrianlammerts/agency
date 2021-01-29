@@ -1,10 +1,10 @@
-import Head from 'next/head';
-import { gsap } from 'gsap/dist/gsap';
-import { ScrollToPlugin } from 'gsap/dist/ScrollToPlugin.js';
+import Head from "next/head";
+import { gsap } from "gsap/dist/gsap";
+import { ScrollToPlugin } from "gsap/dist/ScrollToPlugin.js";
 
-import { useEffect, useState } from 'react';
-import Header from './Header';
-import Nav from './Nav';
+import { useEffect, useState } from "react";
+import Header from "./Header";
+import Nav from "./Nav";
 
 gsap.registerPlugin(ScrollToPlugin);
 
@@ -31,7 +31,7 @@ export default function Layout({ children }) {
 
   useEffect(() => {
     // prevents flashing
-    gsap.to('body', 0, { css: { visibility: 'visible' } });
+    gsap.to("body", 0, { css: { visibility: "visible" } });
     const debouncedHandleResize = debounce(() => {
       setDimensions({
         height: window.innerHeight,
@@ -39,9 +39,9 @@ export default function Layout({ children }) {
       });
     }, 1000);
 
-    window.addEventListener('resize', debouncedHandleResize);
+    window.addEventListener("resize", debouncedHandleResize);
     return () => {
-      window.removeEventListener('resize', debouncedHandleResize);
+      window.removeEventListener("resize", debouncedHandleResize);
     };
   });
 

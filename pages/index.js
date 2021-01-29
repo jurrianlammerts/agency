@@ -1,40 +1,40 @@
-import { gsap } from 'gsap/dist/gsap';
+import { gsap } from "gsap/dist/gsap";
 
-import { useEffect, useState } from 'react';
-import Layout from '../components/Layout';
-import Banner from '../components/Banner';
-import HomeCases from '../components/HomeCases';
-import IntroOverlay from '../components/IntroOverlay';
-import TextSection from '../components/TextSection';
-import CTA from '../components/HomeCTA';
-import Footer from '../components/Footer';
+import { useEffect, useState } from "react";
+import Layout from "../components/Layout";
+import Banner from "../components/Banner";
+import HomeCases from "../components/HomeCases";
+import IntroOverlay from "../components/IntroOverlay";
+import TextSection from "../components/TextSection";
+import CTA from "../components/HomeCTA";
+import Footer from "../components/Footer";
 
-import { getSortedCasesData } from '../lib/cases';
+import { getSortedCasesData } from "../lib/cases";
 
 const tl = gsap.timeline();
 
 const homeAnimation = (completeAnimation) => {
-  tl.from('.line span', 1.8, {
+  tl.from(".line span", 1.8, {
     y: 100,
-    ease: 'power4.out',
-    delay: .75,
+    ease: "power4.out",
+    delay: 0.75,
     skewY: 7,
     stagger: {
       amount: 0.3,
     },
   })
-    .to('.overlay-top', 1.2, {
+    .to(".overlay-top", 1.2, {
       height: 0,
-      ease: 'expo.inOut',
+      ease: "expo.inOut",
       stagger: 0.4,
     })
-    .to('.App', 0, {
-      css: { position: 'relative' },
+    .to(".App", 0, {
+      css: { position: "relative" },
     })
-    .to('.intro-overlay', 0, {
-      css: { display: 'none' },
+    .to(".intro-overlay", 0, {
+      css: { display: "none" },
       onComplete: completeAnimation,
-    })
+    });
 };
 
 export default function Home({ allCases }) {

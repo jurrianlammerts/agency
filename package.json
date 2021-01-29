@@ -1,12 +1,14 @@
 {
-  "name": "agency-010",
+  "name": "lamb-digital",
   "version": "0.1.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "cache-cases": "node scripts/cache.js"
+    "cache-cases": "node scripts/cache.js",
+    "lint": "eslint --fix .",
+    "lint-check": "eslint ."
   },
   "dependencies": {
     "date-fns": "^2.16.1",
@@ -23,7 +25,13 @@
     "sass": "^1.32.5"
   },
   "devDependencies": {
-    "husky": "^4.3.8"
+    "eslint": "^7.18.0",
+    "eslint-config-prettier": "^7.2.0",
+    "eslint-plugin-prettier": "^3.3.1",
+    "eslint-plugin-react": "^7.22.0",
+    "eslint-plugin-react-hooks": "^4.2.0",
+    "husky": "^4.3.8",
+    "prettier": "^2.2.1"
   },
   "husky": {
     "hooks": {
