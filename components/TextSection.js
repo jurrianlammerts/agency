@@ -1,5 +1,5 @@
 import React from "react";
-import ArrowCTAButton from "../components/ArrowCTAButton";
+import CTALink from "../components/CTALink";
 
 export default function TextSection() {
   return (
@@ -15,7 +15,7 @@ export default function TextSection() {
           brand, giving equal weight to the analytical and creative aspects of
           the challenge.
         </p>
-        <ArrowCTAButton text="Learn more" href="/" />
+        <CTALink text="Learn more" href="/" />
       </div>
     </section>
   );

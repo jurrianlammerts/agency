@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import CTALink from "../components/CTALink";
 
 export default function Cases({ cases }) {
   return (
@@ -18,11 +19,15 @@ export default function Cases({ cases }) {
                     src={`/images/${caseItem.img}`}
                     alt={caseItem.title}
                     layout="fill"
+                    quality={75}
                   />
                 </div>
               </a>
             </Link>
           ))}
+        </div>
+        <div className="cta">
+          <CTALink text="All projects" href="/about" />
         </div>
       </div>
     </section>
