@@ -1,0 +1,12 @@
+---
+id: 1
+index: 0
+date: '2020-10-17'
+slug: 'revolt'
+subtitle: 'Revolt'
+title: 'A case on the importance of smart data management, synergy and personalization.'
+img: 'Revolt.jpg'
+backgroundColor: '#de1738'
+---
+
+We are for inclusivity. All our products are tested in a wide variety of people #curology
