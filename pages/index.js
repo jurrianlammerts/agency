@@ -30,16 +30,13 @@ const homeAnimation = (completeAnimation) => {
     })
     .from(
       ".case-image img",
-      1,
+      0.75,
       {
-        ease: "expo.inOut",
+        ease: "expo.easeOut",
         scale: 1.25,
       },
       "-=1"
     )
-    .to(".App", 0, {
-      css: { position: "relative" },
-    })
     .to(".intro-overlay", 0, {
       css: { display: "none" },
       onComplete: completeAnimation,
@@ -49,13 +46,28 @@ const homeAnimation = (completeAnimation) => {
 export default function Home({ allCases }) {
   const [animationComplete, setAnimationComplete] = useState(false);
 
+  useEffect(() => {
+    // Only run animation on first visit
+    window.addEventListener("beforeunload", removeItem);
+    if (getItem() === null) {
+      homeAnimation(completeAnimation);
+      setItem();
+    } else {
+      completeAnimation();
+    }
+    return () => {
+      window.removeEventListener("beforeunload", removeItem);
+    };
+  }, []);
+
   const completeAnimation = () => {
+    document.querySelector(".App").style.position = "relative";
     setAnimationComplete(true);
   };
 
-  useEffect(() => {
-    homeAnimation(completeAnimation);
-  }, []);
+  const removeItem = () => window.sessionStorage.removeItem("firstLoadDone");
+  const getItem = () => window.sessionStorage.getItem("firstLoadDone");
+  const setItem = () => window.sessionStorage.setItem("firstLoadDone", 1);
 
   return (
     <Layout>

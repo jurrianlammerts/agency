@@ -20,7 +20,7 @@ export default function Header({ dimensions }) {
       <div className="container">
         <div className="row v-center space-between">
           <div className="logo">
-            <Link href="/">
+            <Link href="/" passHref>
               <a>
                 <span>LAMB</span>
                 <span>DIGITAL</span>
