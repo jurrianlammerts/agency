@@ -1,6 +1,6 @@
 ---
 id: 1
-index: 1
+index: 0
 date: '2020-10-17'
 slug: 'revolt'
 subtitle: 'Revolt'

@@ -1,6 +1,6 @@
 ---
 id: 3
-index: 2
+index: 1
 date: '2020-09-02'
 slug: 'dr-cocktail'
 subtitle: 'Dr. Cocktail'
