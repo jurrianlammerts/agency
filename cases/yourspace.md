@@ -9,4 +9,13 @@ img: 'yourspace.jpg'
 backgroundColor: '#545a2c'
 ---
 
-We are for inclusivity. Work where an when you want. Work in a group, or by yourself, whatever you do #yourspace
+# Yourspace the place where you will always find your space!
+
+Yourspace is the app for both of you, so that everyone has an opportunity, to make and to grow. Go!
+
+## Rent your workspace in just 4 easy steps!
+
+1. Create your account
+2. Select the type of space you have to rent
+3. Choose the dates and hours available
+4. Rent it, and get payed for the time you don’t use it

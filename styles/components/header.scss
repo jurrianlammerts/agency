@@ -1,21 +1,28 @@
 .header {
   position: fixed;
+  background: none;
   width: 100%;
   height: 128px;
-  z-index: 4;
+  z-index: 3;
   @include media('<=phone') {
     height: 96px;
   }
   .logo {
-    mix-blend-mode: difference;
-    span {
-      cursor: pointer;
-      display: block;
-      font-size: 1.2rem;
-      letter-spacing: 0.5rem;
-      line-height: 1.75rem;
-      text-decoration: none;
-      font-weight: 700;
+    a {
+      span {
+        cursor: pointer;
+        display: block;
+        font-size: 1.2rem;
+        letter-spacing: 0.5rem;
+        line-height: 1.75rem;
+        text-decoration: none;
+        font-weight: 700;
+      }
+    }
+    &.logo-dark {
+      a {
+        color: $white;
+      }
     }
   }
   .nav-toggle {
@@ -30,6 +37,12 @@
     @include media('<=phone') {
       width: 20px;
       margin-right: 16px;
+    }
+
+    &.nav-toggle-dark {
+      .hamburger-menu span {
+        background: $white;
+      }
     }
 
     .hamburger-menu {

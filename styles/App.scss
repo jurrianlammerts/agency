@@ -9,7 +9,7 @@
 @import './components/navigation.scss';
 @import './components/single-case.scss';
 @import './components/cta-button.scss';
-@import './components/home-cta.scss';
+@import './components/cta-footer.scss';
 @import './components/footer.scss';
 @import './components/cta-link.scss';
 @import './components/icon-button.scss';
@@ -22,17 +22,33 @@
   font-display: swap;
 }
 
+@font-face {
+  font-family: 'Gilroy';
+  src: url('/fonts/Gilroy-Regular.woff');
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+}
+
 body,
 html {
   visibility: hidden;
   scroll-behavior: smooth;
-  user-select: none;
   background: $white;
   overscroll-behavior: none;
   margin: 0;
   font-family: 'Josefin Sans', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  ::selection {
+    color: $white;
+    background-color: $cta;
+  }
+}
+
+a {
+  font-family: 'Josefin Sans', sans-serif;
 }
 
 p {
@@ -155,6 +171,10 @@ a {
   z-index: 2;
   transform: translateY(0);
   background: $white;
+  position: relative;
+}
+
+.home-page {
   position: fixed;
   left: 0;
   right: 0;
@@ -163,8 +183,9 @@ a {
 }
 
 .page {
-  height: 100vh;
-  height: calc(var(--vh, 1vh) * 100);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
   width: 100%;
   background: $white;
   .row {

@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import ArrowUp from "./icons/ArrowUp";
 import { openMenu, closeMenu } from "../animations/menuAnimations";
 
-export default function Header({ dimensions }) {
+export default function Header({ navOpen, dark, dimensions }) {
   const [menuState, setMenuState] = useState({ menuOpened: false });
 
   useEffect(() => {
@@ -19,7 +19,11 @@ export default function Header({ dimensions }) {
     <div className="header">
       <div className="container">
         <div className="row v-center space-between">
-          <div className="logo">
+          <div
+            className={`logo ${
+              !menuState.menuOpened && dark ? "logo-dark" : ""
+            }`}
+          >
             <Link href="/" passHref>
               <a>
                 <span>LAMB</span>
@@ -27,7 +31,7 @@ export default function Header({ dimensions }) {
               </a>
             </Link>
           </div>
-          <div className="nav-toggle">
+          <div className={`nav-toggle ${dark ? "nav-toggle-dark" : ""}`}>
             <div
               onClick={() => setMenuState({ menuOpened: true })}
               className="hamburger-menu"

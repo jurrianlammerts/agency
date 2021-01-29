@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { gsap } from "gsap/dist/gsap";
 
-export default function HomeCTA() {
+export default function CTA() {
   const tl = gsap.timeline();
 
   const changeBackground = (hover) => {

@@ -6,8 +6,6 @@ import Banner from "../components/Banner";
 import HomeCases from "../components/HomeCases";
 import IntroOverlay from "../components/IntroOverlay";
 import TextSection from "../components/TextSection";
-import CTA from "../components/HomeCTA";
-import Footer from "../components/Footer";
 
 import { getSortedCasesData } from "../lib/cases";
 
@@ -61,7 +59,7 @@ export default function Home({ allCases }) {
   }, []);
 
   const completeAnimation = () => {
-    document.querySelector(".App").style.position = "relative";
+    gsap.to(".home-page", 0, { css: { position: "relative" } });
     setAnimationComplete(true);
   };
 
@@ -70,14 +68,14 @@ export default function Home({ allCases }) {
   const setItem = () => window.sessionStorage.setItem("firstLoadDone", 1);
 
   return (
-    <Layout>
-      {!animationComplete && <IntroOverlay />}
-      <Banner />
-      <HomeCases cases={allCases} />
-      <TextSection />
-      <CTA />
-      <Footer />
-    </Layout>
+    <div className="home-page">
+      <Layout>
+        {!animationComplete && <IntroOverlay />}
+        <Banner />
+        <HomeCases cases={allCases} />
+        <TextSection />
+      </Layout>
+    </div>
   );
 }
 

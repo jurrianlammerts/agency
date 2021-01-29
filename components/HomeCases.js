@@ -8,7 +8,7 @@ export default function Cases({ cases }) {
       <div className="container">
         <div className="column">
           {cases.map((caseItem) => (
-            <Link href="/" key={caseItem.id}>
+            <Link href={`/cases/${caseItem.slug}`} key={caseItem.id}>
               <a className="case">
                 <div className="case-details">
                   <h2>{caseItem.subtitle}</h2>
