@@ -51,7 +51,7 @@ export default function Layout({ children }) {
       <Nav />
       <div className="App">
         <Head>
-          <title>LAMB DIGITAL</title>
+          <title>LAMB | Digital Agency </title>
           <meta
             name="description"
             content="Creating unique brands is what we do."
