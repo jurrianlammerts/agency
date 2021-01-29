@@ -30,7 +30,8 @@
           .case-image {
             clip-path: polygon(2% 2%, 98% 2%, 98% 98%, 2% 98%);
             img {
-              transform: scale(1.05);
+              // gsap overwrites this, so important :(
+              transform: scale(1.05) !important;
             }
           }
         }
