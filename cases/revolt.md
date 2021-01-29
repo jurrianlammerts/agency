@@ -5,7 +5,7 @@ date: '2020-10-17'
 slug: 'revolt'
 subtitle: 'Revolt'
 title: 'A case on the importance of smart data management, synergy and personalization.'
-img: 'Revolt.jpg'
+img: 'revolt.jpg'
 backgroundColor: '#de1738'
 ---
 
