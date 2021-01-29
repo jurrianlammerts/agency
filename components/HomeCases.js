@@ -19,7 +19,7 @@ export default function Cases({ cases }) {
                     src={`/images/${caseItem.img}`}
                     alt={caseItem.title}
                     layout="fill"
-                    quality={75}
+                    quality={50}
                   />
                 </div>
               </a>
