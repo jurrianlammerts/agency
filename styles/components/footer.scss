@@ -5,9 +5,17 @@
   height: 6.25rem;
   justify-content: space-between;
   align-items: center;
-
+  @include media('<=tablet') {
+    .container {
+      .row {
+        justify-content: center;
+        flex-direction: column;
+      }
+    }
+  }
   .logo {
     color: $black;
+    display: block;
     span {
       cursor: pointer;
       display: block;
@@ -17,8 +25,14 @@
       text-decoration: none;
       font-weight: 700;
     }
+    @include media('<=tablet') {
+      display: none;
+    }
   }
   .footer-socials {
     margin: 0 auto;
+    @include media('<=tablet') {
+      padding-bottom: 1.25rem;
+    }
   }
 }

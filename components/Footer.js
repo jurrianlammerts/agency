@@ -9,7 +9,7 @@ export default function Footer() {
   return (
     <footer className="footer">
       <div className="container">
-        <div className="row v-center space-between">
+        <div className="row v-center">
           <div className="logo">
             <Link href="/">
               <a>

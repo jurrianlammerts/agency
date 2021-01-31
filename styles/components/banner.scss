@@ -1,7 +1,9 @@
 .main {
   height: 35rem;
+  padding: 0;
   @include media('<=tablet') {
     height: 25rem;
+    padding: 0 1rem;
   }
   background-color: $white;
   .column {

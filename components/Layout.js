@@ -35,7 +35,6 @@ export default function Layout({ dark, children }) {
     // prevents flashing
     gsap.to("body", 0, { css: { visibility: "visible" } });
     const debouncedHandleResize = debounce(() => {
-      console.log("debounce");
       setDimensions({
         height: window.innerHeight,
         width: window.innerWidth,

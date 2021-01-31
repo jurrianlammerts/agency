@@ -11,6 +11,9 @@
       transform: translate(0, -60%);
       color: $white;
       position: absolute;
+      @include media('<=tablet') {
+        font-size: 3rem;
+      }
     }
     img {
       object-fit: cover;
