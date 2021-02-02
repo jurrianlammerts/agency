@@ -1,6 +1,6 @@
-import Image from "next/image";
-import Link from "next/link";
-import CTALink from "../components/CTALink";
+import Image from 'next/image';
+import Link from 'next/link';
+import CTALink from '../components/CTALink';
 
 export default function Cases({ cases }) {
   return (
@@ -19,7 +19,7 @@ export default function Cases({ cases }) {
                     src={`/images/${caseItem.img}`}
                     alt={caseItem.title}
                     layout="fill"
-                    quality={50}
+                    quality={75}
                     priority
                   />
                 </div>

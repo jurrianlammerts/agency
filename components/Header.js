@@ -1,10 +1,11 @@
-import Link from "next/link";
-import { useState, useEffect } from "react";
+import Link from 'next/link';
+import { useState, useEffect } from 'react';
+import Headroom from 'headroom.js';
 
-import ArrowUp from "./icons/ArrowUp";
-import { openMenu, closeMenu } from "../animations/menuAnimations";
+import ArrowUp from './icons/ArrowUp';
+import { openMenu, closeMenu } from '../animations/menuAnimations';
 
-export default function Header({ navOpen, dark, dimensions }) {
+export default function HeaderComp({ navOpen, dark, dimensions }) {
   const [menuState, setMenuState] = useState({ menuOpened: false });
 
   useEffect(() => {
@@ -15,11 +16,18 @@ export default function Header({ navOpen, dark, dimensions }) {
     }
   });
 
+  useEffect(() => {
+    const myElement = document.querySelector('header');
+    // construct an instance of Headroom, passing the element
+    const headroom = new Headroom(myElement);
+    headroom.init();
+  }, []);
+
   return (
-    <div className="header">
+    <header className="header">
       <div className="container">
         <div className="row v-center space-between">
-          <div className={`logo ${dark ? "logo-dark" : ""}`}>
+          <div className={`logo ${dark ? 'logo-dark' : ''}`}>
             <Link href="/" passHref>
               <a>
                 <span>LAMB</span>
@@ -27,7 +35,7 @@ export default function Header({ navOpen, dark, dimensions }) {
               </a>
             </Link>
           </div>
-          <div className={`nav-toggle ${dark ? "nav-toggle-dark" : ""}`}>
+          <div className={`nav-toggle ${dark ? 'nav-toggle-dark' : ''}`}>
             <div
               onClick={() => setMenuState({ menuOpened: true })}
               className="hamburger-menu"
@@ -44,6 +52,6 @@ export default function Header({ navOpen, dark, dimensions }) {
           </div>
         </div>
       </div>
-    </div>
+    </header>
   );
 }

@@ -1,11 +1,12 @@
-// import Image from "next/image";
-import { motion } from "framer-motion";
-import Layout from "../../components/Layout";
+import Image from 'next/image';
+import { motion } from 'framer-motion';
+import Layout from '../../components/Layout';
 import {
   getAllCaseIds,
   getCaseData,
   getSortedCasesData,
-} from "../../lib/cases";
+} from '../../lib/cases';
+import ScrollDown from '../../components/icons/ScrollDown';
 
 let easing = [0.175, 0.85, 0.42, 0.96];
 
@@ -35,15 +36,21 @@ export default function SingleCase({ allCases, caseData }) {
     <Layout dark>
       <motion.div className="page" initial="exit" animate="enter" exit="exit">
         <div className="single-case">
-          <div key={caseData.id} className="hero-image">
-            <motion.img
-              variants={imageVariants}
+          <motion.div
+            key={caseData.id}
+            className="hero-image"
+            variants={imageVariants}
+          >
+            <Image
               key={caseData.id}
               src={`/images/${caseData.img}`}
               alt={caseData.title}
+              layout="fill"
             />
             <h1>{caseData.subtitle}</h1>
-          </div>
+
+            <ScrollDown />
+          </motion.div>
           <div className="container">
             <motion.div className="content" variants={textVariants}>
               <div dangerouslySetInnerHTML={{ __html: caseData.contentHtml }} />

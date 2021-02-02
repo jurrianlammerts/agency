@@ -1,8 +1,8 @@
 module.exports = {
   extends: [
-    "plugin:react/recommended",
-    "plugin:react-hooks/recommended",
-    "plugin:prettier/recommended",
+    'plugin:react/recommended',
+    'plugin:react-hooks/recommended',
+    'plugin:prettier/recommended',
   ],
   env: {
     es2021: true,
@@ -11,24 +11,24 @@ module.exports = {
   },
   parserOptions: {
     ecmaVersion: 2018,
-    sourceType: "module",
+    sourceType: 'module',
     ecmaFeatures: {
       jsx: true,
     },
   },
-  ignorePatterns: ["/node_modules/**", "/build/**"],
+  ignorePatterns: ['/node_modules/**', '/build/**'],
   rules: {
-    "no-unused-vars": [
-      "warn",
-      { args: "none", argsIgnorePattern: "req|res|next|val" },
+    'no-unused-vars': [
+      'warn',
+      { args: 'none', argsIgnorePattern: 'req|res|next|val' },
     ],
-    "react/react-in-jsx-scope": 0,
-    "react/prop-types": 0,
-    "prettier/prettier": ["error"],
+    'react/react-in-jsx-scope': 0,
+    'react/prop-types': 0,
+    'prettier/prettier': ['error', { singleQuote: true }],
   },
   settings: {
     react: {
-      version: "detect",
+      version: 'detect',
     },
   },
 };
