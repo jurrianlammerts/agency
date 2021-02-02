@@ -1,5 +1,5 @@
-import React from "react";
-import CTALink from "../components/CTALink";
+import React from 'react';
+import CTALink from '../components/CTALink';
 
 export default function TextSection() {
   return (

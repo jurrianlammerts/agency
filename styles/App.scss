@@ -14,6 +14,8 @@
 @import './components/cta-link.scss';
 @import './components/icon-button.scss';
 @import './components/scroll-down.scss';
+@import './components/cursor.scss';
+@import './components/hero.scss';
 
 @font-face {
   font-family: 'GilroyBold';
@@ -145,7 +147,6 @@ a {
   }
 }
 
-// intro overlay
 .intro-overlay {
   .top {
     height: 100vh;

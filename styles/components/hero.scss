@@ -1,0 +1,102 @@
+.hero {
+  min-height: 20rem;
+  display: flex;
+  align-items: center;
+  background: linear-gradient(to bottom, $light-grey 50%, $white 50%);
+  position: relative;
+
+  .hero-title {
+    h1 {
+      mix-blend-mode: difference;
+      color: $white;
+      margin-top: 6rem;
+      font-size: 4rem;
+      line-height: 4.2rem;
+      font-weight: 700;
+      @include media('<=LGdesktop') {
+        font-size: 4.5rem;
+        height: 5rem;
+      }
+      @include media('<=desktop') {
+        font-size: 3rem;
+        height: 3.5rem;
+      }
+      @include media('<=tablet') {
+        margin-top: 10rem;
+        font-size: 6vw;
+        height: 6vw;
+      }
+      .line {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        overflow: hidden;
+        @include media('<=LGdesktop') {
+          height: 5rem;
+        }
+        @include media('<=desktop') {
+          height: 3.7rem;
+        }
+        @include media('<=tablet') {
+          height: 8vw;
+        }
+      }
+    }
+  }
+  .container {
+    .hero-inner {
+      padding: 0 2rem;
+      .hero-inner-banner {
+        .hero-inner-links {
+          position: relative;
+          display: flex;
+          justify-content: center;
+          .hero-inner-link-item {
+            .hero-inner-link-item-padding {
+              position: relative;
+              &:before {
+                content: '';
+                display: block;
+                position: absolute;
+                top: -30vh;
+                bottom: -30vh;
+                left: 0;
+                right: 0;
+              }
+            }
+            h2 {
+              padding: 12px 22px;
+              display: inline-block;
+              position: relative;
+              overflow: hidden;
+              text-decoration: none;
+              color: $white;
+              transition: color 0.3s, -webkit-text-stroke 0.3s;
+              -webkit-text-stroke: 1px $cta;
+              &:hover {
+                color: $cta;
+              }
+              span {
+                line-height: 1.1;
+                font-weight: 700;
+                font-size: 5.8vw;
+              }
+            }
+            &:first-child {
+              a {
+                padding-left: 0;
+              }
+            }
+            &:last-child {
+              a {
+                padding-right: 0;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

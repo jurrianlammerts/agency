@@ -13,6 +13,9 @@ export const openMenu = (width) => {
     },
   })
     .to('body', 0, { css: { overflow: 'hidden' } })
+    .to('.nav-toggle-label', 0, {
+      opacity: 0,
+    })
     .to('.App', 1, {
       duration: 0.5,
       y: width <= 654 ? '100vh' : '70vh',
@@ -26,7 +29,7 @@ export const openMenu = (width) => {
         color: '#000',
         ease: 'expo.inOut',
       },
-      '=-0.75',
+      '=-0.75'
     )
     .to('.hamburger-menu span', 0.6, {
       delay: -1,
@@ -83,6 +86,11 @@ export const closeMenu = () => {
       },
       '=-0.5',
     )
+    .to('.nav-toggle-label', 0.25, {
+      duration: 0.25,
+      ease: 'expo.inOut',
+      opacity: 1,
+    })
     .to('#circle', 0.6, {
       delay: -0.6,
       css: {

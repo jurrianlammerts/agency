@@ -1,11 +1,11 @@
 .main {
   height: 35rem;
   padding: 0;
+  background-color: $white;
   @include media('<=tablet') {
     height: 25rem;
     padding: 0 1rem;
   }
-  background-color: $white;
   .column {
     display: flex;
     flex-direction: column;

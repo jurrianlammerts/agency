@@ -35,11 +35,11 @@ export default function HeaderComp({ navOpen, dark, dimensions }) {
               </a>
             </Link>
           </div>
-          <div className={`nav-toggle ${dark ? 'nav-toggle-dark' : ''}`}>
-            <div
-              onClick={() => setMenuState({ menuOpened: true })}
-              className="hamburger-menu"
-            >
+          <button
+            onClick={() => setMenuState({ menuOpened: !menuState.menuOpened })}
+            className={`nav-toggle ${dark ? 'nav-toggle-dark' : ''}`}
+          >
+            <div className="hamburger-menu">
               <span></span>
               <span></span>
             </div>
@@ -49,7 +49,7 @@ export default function HeaderComp({ navOpen, dark, dimensions }) {
             >
               <ArrowUp />
             </div>
-          </div>
+          </button>
         </div>
       </div>
     </header>

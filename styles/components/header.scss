@@ -1,4 +1,5 @@
 .header {
+  top: 0;
   position: fixed;
   width: 100%;
   height: 128px;
@@ -30,6 +31,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    background: none;
+    border: none;
+    outline: none;
+
     @include media('<=tablet') {
       margin-right: 24px;
     }
@@ -39,6 +44,7 @@
     }
 
     &.nav-toggle-dark {
+      color: $white;
       .hamburger-menu span {
         background: $white;
       }
@@ -59,9 +65,8 @@
       }
     }
     .hamburger-menu-close {
-      position: absolute;
       display: none;
-
+      position: absolute;
       svg {
         @include media('<=tablet') {
           width: 56px;

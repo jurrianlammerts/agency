@@ -1,0 +1,35 @@
+.cursor {
+  position: absolute;
+  top: -20rem;
+  left: 0;
+  z-index: 11;
+  contain: layout style size;
+  pointer-events: none;
+  mix-blend-mode: exclusion;
+  filter: invert(1);
+  &:before {
+    content: '';
+    position: absolute;
+    top: -24px;
+    left: -24px;
+    display: block;
+    transform: scale(0.2);
+    border-radius: 50%;
+  }
+  .cursor-media {
+    display: block;
+    height: 350px;
+    width: 350px;
+    overflow: hidden;
+    border-radius: 100%;
+    transform: scale(0);
+    margin: -175px 0 0 -175px;
+    position: relative;
+    video {
+      height: 350px;
+      left: 50%;
+      transform: translateX(-50%);
+      position: absolute;
+    }
+  }
+}
