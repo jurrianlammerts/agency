@@ -1,41 +1,56 @@
-import Image from "next/image";
+// import Image from "next/image";
 import { motion } from "framer-motion";
+import Layout from "../../components/Layout";
 import {
   getAllCaseIds,
   getCaseData,
   getSortedCasesData,
 } from "../../lib/cases";
 
-import Layout from "../../components/Layout";
+let easing = [0.175, 0.85, 0.42, 0.96];
+
+const imageVariants = {
+  exit: { y: 150, opacity: 0, transition: { duration: 0.5, ease: easing } },
+  enter: {
+    y: 0,
+    opacity: 1,
+    transition: {
+      duration: 0.5,
+      ease: easing,
+    },
+  },
+};
+
+const textVariants = {
+  exit: { y: 100, opacity: 0, transition: { duration: 0.5, ease: easing } },
+  enter: {
+    y: 0,
+    opacity: 1,
+    transition: { delay: 0.1, duration: 0.5, ease: easing },
+  },
+};
 
 export default function SingleCase({ allCases, caseData }) {
   return (
     <Layout dark>
-      <div className="page">
+      <motion.div className="page" initial="exit" animate="enter" exit="exit">
         <div className="single-case">
-          <motion.div
-            key={caseData.id}
-            className="hero-image"
-            layoutId="image"
-            initial={{ opacity: 0, scale: 1.05 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.5 }}
-          >
-            <Image
+          <div key={caseData.id} className="hero-image">
+            <motion.img
+              variants={imageVariants}
               key={caseData.id}
               src={`/images/${caseData.img}`}
               alt={caseData.title}
-              layout="fill"
             />
             <h1>{caseData.subtitle}</h1>
-          </motion.div>
+          </div>
           <div className="container">
-            <div className="content">
+            <motion.div className="content" variants={textVariants}>
               <div dangerouslySetInnerHTML={{ __html: caseData.contentHtml }} />
-            </div>
+            </motion.div>
           </div>
         </div>
-      </div>
+      </motion.div>
     </Layout>
   );
 }

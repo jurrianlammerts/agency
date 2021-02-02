@@ -19,11 +19,7 @@ export default function Header({ navOpen, dark, dimensions }) {
     <div className="header">
       <div className="container">
         <div className="row v-center space-between">
-          <div
-            className={`logo ${
-              !menuState.menuOpened && dark ? "logo-dark" : ""
-            }`}
-          >
+          <div className={`logo ${dark ? "logo-dark" : ""}`}>
             <Link href="/" passHref>
               <a>
                 <span>LAMB</span>

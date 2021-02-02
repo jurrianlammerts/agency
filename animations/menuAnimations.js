@@ -18,6 +18,16 @@ export const openMenu = (width) => {
       y: width <= 654 ? "100vh" : "70vh",
       ease: "expo.inOut",
     })
+    .to(
+      ".logo-dark a",
+      0.2,
+      {
+        duration: 0.3,
+        color: "#000",
+        ease: "expo.inOut",
+      },
+      "=-0.75"
+    )
     .to(".hamburger-menu span", 0.6, {
       delay: -1,
       scaleX: 0,
@@ -63,6 +73,16 @@ export const closeMenu = () => {
     y: 0,
     ease: "expo.inOut",
   })
+    .to(
+      ".logo-dark a",
+      0.2,
+      {
+        duration: 0.3,
+        color: "#fff",
+        ease: "expo.inOut",
+      },
+      "=-0.5"
+    )
     .to("#circle", 0.6, {
       delay: -0.6,
       css: {
