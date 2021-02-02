@@ -43,6 +43,7 @@ export default class Cursor {
   onScaleMouse() {
     this.Item.forEach((link) => {
       if (link.matches(':hover')) {
+        console.log(link);
         this.setVideo(link);
         this.ScaleCursor(this.Cursor.children[0], 0.8);
       }
@@ -53,11 +54,11 @@ export default class Cursor {
       link.addEventListener('mouseleave', () => {
         this.ScaleCursor(this.Cursor.children[0], 0);
       });
-      link.children[1].addEventListener('mouseenter', () => {
+      link.children[0].addEventListener('mouseenter', () => {
         this.Cursor.classList.add('media-blend');
         this.ScaleCursor(this.Cursor.children[0], 1.2);
       });
-      link.children[1].addEventListener('mouseleave', () => {
+      link.children[0].addEventListener('mouseleave', () => {
         this.Cursor.classList.remove('media-blend');
         this.ScaleCursor(this.Cursor.children[0], 0.8);
       });

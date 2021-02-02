@@ -35,6 +35,11 @@
         font-size: 6vw;
         height: 6vw;
       }
+      @include media('<=phone') {
+        margin-top: 10rem;
+        font-size: 5vw;
+        height: 5vw;
+      }
       .line {
         width: 100%;
         display: flex;

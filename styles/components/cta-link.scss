@@ -32,4 +32,36 @@
       background: $black;
     }
   }
+
+  @include media('<=tablet') {
+    font-size: 1rem;
+    .cta-inner {
+      &:after {
+        content: '•';
+        position: absolute;
+        right: -1rem;
+        top: 0.8rem;
+        color: $cta;
+        font-size: 1.5rem;
+      }
+    }
+    &:after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 1px;
+      display: block;
+      margin-top: 5px;
+      right: 0;
+      background: $black;
+      transition: 0.4s ease;
+    }
+    &:hover {
+      &:after {
+        width: 100%;
+        left: 0;
+        background: $black;
+      }
+    }
+  }
 }

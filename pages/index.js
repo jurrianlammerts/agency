@@ -75,7 +75,7 @@ export default function Home({ allCases }) {
         <Banner />
         <HomeCases cases={allCases} />
         <Hero />
-        <TextSection />
+        {/* <TextSection /> */}
       </Layout>
     </div>
   );

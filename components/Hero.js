@@ -57,25 +57,29 @@ export default function TextSection() {
           <div className="hero-inner-banner">
             <div className="hero-inner-links">
               <div data-video-src="websites" className="hero-inner-link-item">
-                <div className="hero-inner-link-item-padding"></div>
                 <h2>
                   <span>Websites</span>
                 </h2>
               </div>
               <div data-video-src="apps" className="hero-inner-link-item">
-                <div className="hero-inner-link-item-padding"></div>
                 <h2>
                   <span>Apps</span>
                 </h2>
               </div>
               <div data-video-src="branding" className="hero-inner-link-item">
-                <div className="hero-inner-link-item-padding"></div>
                 <h2>
                   <span>Branding</span>
                 </h2>
               </div>
             </div>
           </div>
+          {/* <div className="hero-footer">
+            <p>
+              Leading digital agency with solid design and development
+              expertise. We build readymade websites, mobile applications, and
+              elaborate online business services.
+            </p>
+          </div> */}
         </div>
       </div>
     </div>
